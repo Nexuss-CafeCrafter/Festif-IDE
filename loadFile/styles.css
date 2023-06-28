@@ -1,0 +1,32 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #888888;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.container button {
+  margin-right: 10px;
+}
+
+#editor {
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 4px ridge #AEBF15;
+  padding: 6px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  border-radius: 10px;
+  width: 100%;
+  height: calc(100vh - 80px);
+  resize: none;
+  box-sizing: border-box;
+}

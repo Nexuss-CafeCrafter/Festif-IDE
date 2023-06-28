@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MURGE</title>
+        <link rel="icon" type="image/x-icon" href="images/pastaga.ico">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <input type="file" id="fileInput">
+            <button id="loadButton">Load File</button>
+            <button id="saveButton">Save File</button>
+        </div>
+
+        <script src="fileEditor.js"></script>
+
+        <div id="APERO" style="display: none;">
+            <h1 id="apero-text">C'est l'heure de l'apéro !</h1>
+            <p>Haaaaa, déjà 30 minutes que tu codes?! C'est le moment d'aller te reposer, prendre un petit apéro avec les copains!</p>
+            <img id="bottle" src="images/pastaga.ico" alt="verre de pastis">
+            <div id="text-container">
+                <h2>Si vous le souhaitez, nous pouvons vous proposer un beer pong virtuel !</h2>
+                <p>Cliquez sur le bouton ci-dessous si vous souhaitez jouer :</p>
+                <button onclick="window.location.href = 'BeerPong/index.html';" id="play-button">PLAY</button>
+                <img id="beer-pong-image" src="images/beer-pong.png" alt="Image du beer-pong virtuel">
+            </div>
+        </div>
+        <div id="ide-container">
+            <h1>IDE - MURGE</h1>
+            <p>Bienvenue dans l'IDE festif de MURGE !</p>
+            <textarea id="text" oninput="PostPause()"></textarea>
+        </div>
+        <div id="standby" style="display: none;">
+            <img id="patrick" src="images/patrick.png" alt="tete de Patrick Sebastien">
+        </div>
+
+        <script src="apero.js"></script>
+        <script src="standby.js"></script>
+    </body>
+</html>

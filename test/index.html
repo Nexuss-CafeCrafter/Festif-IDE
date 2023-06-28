@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MURGE</title>
+  <link rel="icon" type="image/x-icon" href="images/pastaga.ico">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/codemirror.min.css">
+  <link rel="stylesheet" href="theme/paraiso-light.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/addon/hint/show-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/addon/hint/javascript-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/addon/hint/html-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/addon/hint/css-hint.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/addon/hint/show-hint.min.css">
+  <style>
+    .editor {
+      width: 100% !important;
+      height: 500px !important;
+    }
+    .CodeMirror{
+      font-size: 20px;
+      height: 700px;
+    }
+    .CodeMirror-scroll{
+      background-color: #F7EAC8;
+    }
+    .CodeMirror-hints {
+      z-index: 9999; /* Ajuste la valeur du z-index pour que les suggestions soient visibles */
+    }
+    .CodeMirror-hint-active {
+      background-color: #f0f0f0 !important; /* Couleur de fond pour l'élément le plus évident */
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <input type="file" id="fileInput">
+  <button id="saveButton" onclick="saveLoadedFile()">Save File</button>
+  <button id="runButton" onclick="runLoadedFile()">Run</button>
+  <button id="stopButton" onclick="stopMusic()" style="display: none;">Stop Music</button>
+</div>
+
+  <div id="APERO" style="display: none;">
+    <h1 id="apero-text">C'est l'heure de l'apéro !</h1>
+    <p>Haaaaa, déjà 30 minutes que tu codes?! C'est le moment d'aller te reposer, prendre un petit apéro avec les copains!</p>
+    <img id="bottle" src="images/pastaga.ico" alt="verre de pastis">
+    <div id="text-container">
+      <h2>Si vous le souhaitez, nous pouvons vous proposer un beer pong virtuel !</h2>
+      <p>Cliquez sur le bouton ci-dessous si vous souhaitez jouer :</p>
+      <button id="play-button">PLAY</button>
+      <img id="beer-pong-image" src="images/beer-pong.png" alt="Image du beer-pong virtuel">
+    </div>
+  </div>
+
+<div id="ide-container">
+  <h1>IDE - MURGE</h1>
+  <p>Bienvenue dans l'IDE festif de MURGE !</p>
+</div>
+<div id="code" class="editor" oninput="PostPause()"></div>
+<div id="standby" style="display: none;">
+  <img id="patrick" src="images/patrick.png" alt="tete de Patrick Sebastien">
+</div>
+<script src="music.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/mode/css/css.min.js"></script>
+<script src="pause.js"></script>
+<script src="fileEditor.js"></script>
+<script src="app.js"></script>
+<script src="apero.js"></script>
+<script src="standby.js"></script>
+</body>
+</html>
